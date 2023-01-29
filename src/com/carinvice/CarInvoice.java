@@ -24,4 +24,14 @@ public double MinFare(double kilometer , int minute) {
 		}
 		return invoice;
 	}
+//calculate multiple ride fare
+public double MultipleRide(Rides[] ride) {
+	double returnFare=0.0;
+	//using for loop check calculate for every array 
+	for(Rides rides:ride)
+	{
+		returnFare=this.MinFare(rides.distance, rides.time);
+	}
+	return returnFare;
+}
 }

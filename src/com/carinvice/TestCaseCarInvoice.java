@@ -25,6 +25,20 @@ class TestCaseCarInvoice {
 		double returnFare=carinvoice.MinFare(distance,time);
 		Assertions.assertEquals(5.0,returnFare); //(assertEquals(expected,actual,delta)
 	}
-	
+	@Test
+	void TotalFareForMultipleRide()
+	{
+		// multiple ride value store int array 
+	  Rides []ride= 
+		  { 
+		    //take value to constructer 
+		    new Rides(10.0,2),
+	        new Rides(20.0,4)
+		  };
+	  //return value from caltulatin method
+	  double returnFare=carinvoice.MultipleRide(ride);
+	  Assertions.assertEquals(204,returnFare,0.0);
+	}
+
 	
 }
