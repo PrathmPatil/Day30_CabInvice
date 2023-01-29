@@ -38,6 +38,13 @@ class TestCaseCarInvoice {
 	  //return value from caltulatin method
 	  double returnFare=carinvoice.MultipleRide(ride);
 	  Assertions.assertEquals(204,returnFare,0.0);
+	  //return value from totalcountofrides
+	  int returnRideCount=carinvoice.calulate_rides(ride);
+	  Assertions.assertEquals(2,returnRideCount,0.0);
+	  //return average for per ride
+	  double return_average=carinvoice.caltulateAverage(returnFare,returnRideCount);
+	  Assertions.assertEquals(102,return_average,0.0);
+	  
 	}
 
 	

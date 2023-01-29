@@ -34,4 +34,17 @@ public double MultipleRide(Rides[] ride) {
 	}
 	return returnFare;
 }
+public int calulate_rides(Rides[]ride)
+{
+	int rides_count=0;
+	for(Rides rides:ride)
+	{
+		rides_count++;
+	}
+	return rides_count;
+}
+public double caltulateAverage(double returnFare, int returnRideCount) {
+    double returnAverage=returnFare/returnRideCount;
+	return returnAverage;
+}
 }
