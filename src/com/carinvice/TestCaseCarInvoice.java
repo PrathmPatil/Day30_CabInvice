@@ -11,11 +11,20 @@ class TestCaseCarInvoice {
 	void TotalFareForOneRide() 
 	{
 		int distance=4; //kilometer
-		int time=20; //min
+		int time=20; //minute
 		//carInvice(Distance_In_Kilometer,Time_In_Minute)
 		int returnValue=carinvoice.carInvoice(distance, time);
 		//assertEquals(Experted(Distance_In_Kilometer*MAXIMUM_COST_PER_KILOMETER + Time_In_Minute*COST_PER_MINUTE),Actual_Return_Value)
 		Assertions.assertEquals(60, returnValue, 0.0);
 	}
+	@Test
+	void TotalMinFareForOneRide()
+	{
+		double distance=0.2; //kilometer
+		int time=1; //minute
+		double returnFare=carinvoice.MinFare(distance,time);
+		Assertions.assertEquals(5.0,returnFare); //(assertEquals(expected,actual,delta)
+	}
+	
 	
 }
