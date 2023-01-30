@@ -7,6 +7,10 @@ public class CarInvoice {
 	final static int MAXIMUM_COST_PER_KILOMETER=10;
 	final static int COST_PER_MINUTE=1;
 	final static int MINIMUM_FARE=5;
+	//prremiumFare
+	final static int PREMIUM_MAXIMUM_COST_PER_KILOMETER=15;
+	final static int PREMIUM_COST_PER_MINUTE=2;
+	final static int PREMIUM_MINIMUM_FARE=20;
 	
 //calculate carinvice 
 	static int carInvoice(int kilometer,int minute)
@@ -46,5 +50,13 @@ public int calulate_rides(Rides[]ride)
 public double caltulateAverage(double returnFare, int returnRideCount) {
     double returnAverage=returnFare/returnRideCount;
 	return returnAverage;
+}
+public double caluculatePrimiumFare(double distance, int time) {
+	double returnPremiumFare=PREMIUM_MAXIMUM_COST_PER_KILOMETER*distance+ PREMIUM_COST_PER_MINUTE*time;
+	if(returnPremiumFare<20)
+	{
+		return PREMIUM_MINIMUM_FARE;
+	}
+	return returnPremiumFare;
 }
 }

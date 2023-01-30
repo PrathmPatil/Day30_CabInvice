@@ -44,8 +44,20 @@ class TestCaseCarInvoice {
 	  //return average for per ride
 	  double return_average=carinvoice.caltulateAverage(returnFare,returnRideCount);
 	  Assertions.assertEquals(102,return_average,0.0);
-	  
 	}
+	
+	//step 5 nrmal ride and primium ride
+	  @Test
+	  void PremiumRides()
+	  {
+		  double distance=4;
+		  int time=2;
+		  double returnPremiumRideFare=carinvoice.caluculatePrimiumFare(distance,time);
+		  Assertions.assertEquals(64, returnPremiumRideFare);;
+		  
+	  }
+	  
+
 
 	
 }
